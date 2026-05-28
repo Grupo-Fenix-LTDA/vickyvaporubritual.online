@@ -43,7 +43,7 @@
 
   /* ---------------- gate de revelação ---------------- */
   function setupGate() {
-    var SECONDS_TO_DISPLAY = 2108; // delay de 1981 segundos
+    var SECONDS_TO_DISPLAY = 2108; // delay de 2014 segundos
     var STORAGE_KEY = 'vigortrix_revealed_' + SECONDS_TO_DISPLAY;
     var revealed = false;
 

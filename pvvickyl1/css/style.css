@@ -116,7 +116,7 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 25px;
   flex-wrap: wrap;
 }
@@ -131,7 +131,8 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
 /* base card */
 .card {
   flex: 0 1 300px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border: 3px solid #a6a6a6;
   border-radius: 18px;
@@ -142,7 +143,7 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   position: relative;
 }
 .card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,.12);
 }
 
@@ -155,7 +156,14 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   padding: 8px;
   font-size: 18px;
 }
-.card-body { padding: 20px 18px; }
+.card-body {
+  padding: 20px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 .card-title {
   font-size: 19px;
   font-weight: 800;
@@ -173,6 +181,7 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   display: inline-flex;
   align-items: baseline;
   gap: 4px;
+  align-self: center;   
 }
 .price-currency { font-size: 32px; font-weight: 700; }
 .price-big {
@@ -453,7 +462,11 @@ button { border: 0; background: transparent; cursor: pointer; font-family: inher
   .headline-section { padding: 25px 15px 10px; }
   .timer-headline { font-size: 18px; }
   .timer-countdown { font-size: 36px; }
-  .pricing-grid { flex-direction: column; align-items: center; padding: 0 5px; }
+  .pricing-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px;
+  }
   .pricing-grid .card:nth-child(1) { order: 3; }
   .pricing-grid .card:nth-child(2) { order: 1; }
   .pricing-grid .card:nth-child(3) { order: 2; }
